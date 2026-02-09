@@ -13,7 +13,7 @@ const Footer = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
             </svg>,
             tooltipContent: 'Home',
-            link: '/home',
+            link: '/',
         },
         {
             id: 2,
@@ -21,7 +21,7 @@ const Footer = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
             </svg>,
             tooltipContent: 'Project',
-            link: '',
+            link: '/projects',
         },
         {
             id: 3,
@@ -54,7 +54,7 @@ const Footer = () => {
     const secondGroup = meuns.slice(3);
     return (
         <>
-            <div className="absolute top-4 right-0 left-0 z-10 px-2">
+            <div className="fixed top-4 right-0 left-0 z-10 px-2">
                 <div
                     className="flex items-center justify-between rounded-3xl backdrop-blur-lg bg-[#f8f8f8d6] text-gray-200 font-medium font-mono px-3 py-3 shadow-lg max-w-md mx-auto transition-all duration-300 hover:shadow-xl hover:bg-opacity-90 border border-white "
                 >
@@ -64,10 +64,10 @@ const Footer = () => {
                             content={item.tooltipContent}
                             classNames={{
                                 content:
-                                    "py-1 px-3 shadow-xl rounded-xl mt-3 text-black bg-[#f8f8f8ef]",
+                                    "py-1 px-3 shadow-xl rounded-xl mt-3 text-black bg-[#f8f8f8ef] ",
                             }}
                         >
-                                <button  onClick={() => item.link && router.push(item.link)} className="cursor-pointer text-zinc-800 border border-stone-500/40 p-3 rounded-2xl">
+                                <button  onClick={() => item.link && router.push(item.link)} className="hover:shadow-lg cursor-pointer text-zinc-800 border border-stone-500/40 p-3 rounded-2xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1">
                                     {item.icon}
                                 </button>
                         </Tooltip>
@@ -86,7 +86,7 @@ const Footer = () => {
                             <Link href={item.link || "#"}
                                 target="_blank"
                                 rel="noopener noreferrer">
-                                <button className="cursor-pointer text-zinc-800 border border-stone-500/40 p-3 rounded-2xl">
+                                <button className="cursor-pointer text-zinc-800 border border-stone-500/40 p-3 rounded-2xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
                                     {item.icon}
                                 </button>
                             </Link>

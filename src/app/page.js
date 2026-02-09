@@ -1,12 +1,10 @@
-import Image from "next/image";
-import  Footer from "./Footer";
+
 import HomeScreen  from "./Home";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen w-full  items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="relative flex min-h-screen w-full items-center justify-center">
       <HomeScreen />
-      <Footer />
     </div>
   );
 }
