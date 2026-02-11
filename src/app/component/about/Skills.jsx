@@ -1,77 +1,128 @@
 const Skills = () => {
-    return (
-        <>
-            <section className="skill">
-                <h3 className="text-lg font-semibold">My skills</h3>
+  const skills = [
+    {
+      id: 1,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+      alt: "html5",
+    },
+    {
+      id: 2,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+      alt: "css3",
+    },
+    {
+      id: 3,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+      alt: "javascript",
+    },
+    {
+      id: 4,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      alt: "react",
+    },
+    {
+      id: 5,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      alt: "nextjs",
+    },
+    {
+      id: 6,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
+      alt: "redux",
+    },
+    {
+      id: 7,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      alt: "tailwindcss",
+    },
+    {
+      id: 8,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
+      alt: "bootstrap",
+    },
+    {
+      id: 9,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+      alt: "mongodb",
+    },
+    {
+      id: 10,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+      alt: "php",
+    },
+    {
+      id: 11,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
+      alt: "materialUi",
+    },
+    {
+      id: 12,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+      alt: "java",
+    },
+    {
+      id: 13,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+      alt: "python",
+    },
+    {
+      id: 14,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+      alt: "cplusplus",
+    },
+    {
+      id: 15,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
+      alt: "c",
+    },
+    {
+      id: 16,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+      alt: "git",
+    },
+    {
+      id: 17,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+      alt: "github",
+    },
+    {
+      id: 18,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg",
+      alt: "netlify",
+    },
+    {
+      id: 19,
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
+      alt: "vuejs",
+    },
+  ];
 
-                <ul className="skills-list content-card">
-                    <li className="skills-item">
-                        <div className="title-wrapper">
-                            <h5 className="h5">Html/Css</h5>
-                            <data value="85">85%</data>
-                        </div>
+  return (
+    <>
+      <section className="skill">
+        <h3 className="text-lg font-semibold">My skills</h3>
 
-                        <div className="skill-progress-bg">
-                            <div className="skill-progress-fill" style={{ width: "85%" }}></div>
-                        </div>
-                    </li>
-                    <li className="skills-item">
-                        <div className="title-wrapper">
-                            <h5 className="h5">Javascript</h5>
-                            <data value="75">75%</data>
-                        </div>
+        <div
+          className="py-3 grid 
+                gap-2
+                grid-cols-5
+                text-center
+                xs:grid-cols-4
+                md:grid-cols-6
+                lg:grid-cols-9 "
+        >
+          {skills.map((items) => (
+            <div
+              key={items.id}
+              className="hover:shadow-lg cursor-pointer text-zinc-800 border border-stone-500/40 p-3 rounded-2xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1"
+            >
+              <img src={items.link} alt={items.alt} width="40" height="40" />
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+};
 
-                        <div className="skill-progress-bg">
-                            <div className="skill-progress-fill" style={{ width: "75%" }}></div>
-                        </div>
-                    </li>
-
-                    <li className="skills-item">
-                        <div className="title-wrapper">
-                            <h5 className="h5">React/React native</h5>
-                            <data value="70">70%</data>
-                        </div>
-
-                        <div className="skill-progress-bg">
-                            <div className="skill-progress-fill" style={{ width: "50%" }}></div>
-                        </div>
-                    </li>
-
-                    <li className="skills-item">
-                        <div className="title-wrapper">
-                            <h5 className="h5">Boostrap</h5>
-                            <data value="90">90%</data>
-                        </div>
-
-                        <div className="skill-progress-bg">
-                            <div className="skill-progress-fill" style={{ width: "90%" }}></div>
-                        </div>
-                    </li>
-
-                    <li className="skills-item">
-                        <div className="title-wrapper">
-                            <h5 className="h5">Tailwind CSS</h5>
-                            <data value="50">50%</data>
-                        </div>
-
-                        <div className="skill-progress-bg">
-                            <div className="skill-progress-fill" style={{ width: "50%" }}></div>
-                        </div>
-                    </li>
-                    <li className="skills-item">
-                        <div className="title-wrapper">
-                            <h5 className="h5">Flutter</h5>
-                            <data value="20">20%</data>
-                        </div>
-
-                        <div className="skill-progress-bg">
-                            <div className="skill-progress-fill" style={{ width: "20%" }}></div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </>
-    )
-}
-
-export default Skills
+export default Skills;

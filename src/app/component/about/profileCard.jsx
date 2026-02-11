@@ -4,7 +4,7 @@
 export default function ProfileCard() {
     return (
         <>
-            <div className="sticky w-full h-full rounded-3xl bg-[#f8f8f8] p-4 shadow-lg">
+            <div className="md:sticky  top-28 w-full h-max rounded-3xl bg-[#f8f8f8] p-4 shadow-lg">
 
 
                 {/* Gradient mockup container */}
@@ -14,7 +14,7 @@ export default function ProfileCard() {
                 {/* Text section */}
                 <div className="mt-4">
                     <h3 className="text-xl font-semibold">Hey </h3>
-                    <p className="text-sm leading-5 text-gray-500">I'm currently at Prisma, where I get to create digital experiences that are functional, fun, and positively impact people's lives by making their tech less painful and more pleasurable!</p>
+                    <p className="text-sm leading-5 text-gray-500"> With over three years of hands-on experience in crafting dynamic and user-centric web interfaces, I specialize in translating complex requirements into elegant, functional designs. My expertise lies in HTML, CSS, JavaScript, and modern frameworks i.e React.js/React Native, combined with a keen eye for detail and a commitment to delivering high-quality user experiences.</p>
 
                     <div className="mt-3 flex gap-2 px-3 rounded-full w-fit border">
                         <div className="flex items-center gap-1 justify-center ">
